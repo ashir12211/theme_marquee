@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="homepage" inherit_id="website.homepage" name="marquee" priority="99">
+        <xpath expr="." position="replace">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty limit-min homepage theme_bobcat">
+
+                    <!-- Marquee Variety Pack - 35 Styles -->
+                    <section class="py-5" style="background: #0f172a;">
+                        <div class="container">
+                            <!-- Marquee 1: Basic CSS Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">1. Basic CSS Marquee</h2>
+                            <div class="marquee-container basic-marquee">
+                                <div class="marquee-content">
+                                    <span>BREAKING NEWS • LATEST UPDATES • SPECIAL OFFERS • NEW ARRIVALS • </span>
+                                    <span>BREAKING NEWS • LATEST UPDATES • SPECIAL OFFERS • NEW ARRIVALS • </span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 2: Pause on Hover -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">2. Pause on Hover</h2>
+                            <div class="marquee-container hover-marquee">
+                                <div class="marquee-content">
+                                    <div class="card">Item 1</div>
+                                    <div class="card">Item 2</div>
+                                    <div class="card">Item 3</div>
+                                    <div class="card">Item 4</div>
+                                    <div class="card">Item 5</div>
+                                    <div class="card">Item 6</div>
+                                    <div class="card">Item 1</div>
+                                    <div class="card">Item 2</div>
+                                    <div class="card">Item 3</div>
+                                    <div class="card">Item 4</div>
+                                    <div class="card">Item 5</div>
+                                    <div class="card">Item 6</div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 3: Seamless Infinite Loop (Reverse) -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">3. Seamless Infinite Loop (Reverse)</h2>
+                            <div class="marquee-container seamless-marquee reverse">
+                                <div class="marquee-track">
+                                    <span class="text-item">DESIGN</span>
+                                    <span class="text-item">DEVELOPMENT</span>
+                                    <span class="text-item">STRATEGY</span>
+                                    <span class="text-item">MARKETING</span>
+                                    <span class="text-item">BRANDING</span>
+                                    <span class="text-item">DESIGN</span>
+                                    <span class="text-item">DEVELOPMENT</span>
+                                    <span class="text-item">STRATEGY</span>
+                                    <span class="text-item">MARKETING</span>
+                                    <span class="text-item">BRANDING</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 4: Vertical Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">4. Vertical Marquee</h2>
+                            <div class="marquee-container vertical-marquee">
+                                <div class="marquee-track-vertical">
+                                    <div class="v-item">🚀 LAUNCHING</div>
+                                    <div class="v-item">📈 SCALING</div>
+                                    <div class="v-item">💎 GROWING</div>
+                                    <div class="v-item">🔥 IGNITING</div>
+                                    <div class="v-item">🚀 LAUNCHING</div>
+                                    <div class="v-item">📈 SCALING</div>
+                                    <div class="v-item">💎 GROWING</div>
+                                    <div class="v-item">🔥 IGNITING</div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 5: Angled Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">5. Angled Marquee</h2>
+                            <div class="marquee-container angled-wrapper">
+                                <div class="angled-marquee">
+                                    <div class="marquee-content">
+                                        <span>CREATIVE • INNOVATIVE • BOLD • DARING • UNIQUE • </span>
+                                        <span>CREATIVE • INNOVATIVE • BOLD • DARING • UNIQUE • </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 6: Outline & Fill Typography -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">6. Outline &amp; Fill Typography</h2>
+                            <div class="marquee-container outline-fill-wrapper">
+                                <div class="marquee-track-outline">
+                                    <span class="filled-text">BOLD • IMPACT • MODERN • </span>
+                                    <span class="filled-text">BOLD • IMPACT • MODERN • </span>
+                                    <span class="filled-text">BOLD • IMPACT • MODERN • </span>
+                                    <span class="filled-text">BOLD • IMPACT • MODERN • </span>
+                                </div>
+                                <div class="marquee-track-outline reverse">
+                                    <span class="outline-text">DESIGN • FUTURE • STYLE • </span>
+                                    <span class="outline-text">DESIGN • FUTURE • STYLE • </span>
+                                    <span class="outline-text">DESIGN • FUTURE • STYLE • </span>
+                                    <span class="outline-text">DESIGN • FUTURE • STYLE • </span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 7: 3D Perspective Scroll -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">7. 3D Perspective Scroll</h2>
+                            <div class="perspective-container">
+                                <div class="marquee-3d">
+                                    <div class="marquee-content-3d">
+                                        <span>DIMENSION • DEPTH • SPACE • REALITY • </span>
+                                        <span>DIMENSION • DEPTH • SPACE • REALITY • </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 8: Modern Card Strip -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">8. Modern Card Strip</h2>
+                            <div class="marquee-container card-strip-wrapper">
+                                <div class="card-strip-content">
+                                    <div class="modern-card c1">
+                                        <div class="card-icon">🎨</div>
+                                        <h3>Creative</h3>
+                                    </div>
+                                    <div class="modern-card c2">
+                                        <div class="card-icon">⚡</div>
+                                        <h3>Fast</h3>
+                                    </div>
+                                    <div class="modern-card c3">
+                                        <div class="card-icon">🔒</div>
+                                        <h3>Secure</h3>
+                                    </div>
+                                    <div class="modern-card c4">
+                                        <div class="card-icon">📱</div>
+                                        <h3>Mobile</h3>
+                                    </div>
+                                    <div class="modern-card c5">
+                                        <div class="card-icon">🌐</div>
+                                        <h3>Global</h3>
+                                    </div>
+                                    <div class="modern-card c1">
+                                        <div class="card-icon">🎨</div>
+                                        <h3>Creative</h3>
+                                    </div>
+                                    <div class="modern-card c2">
+                                        <div class="card-icon">⚡</div>
+                                        <h3>Fast</h3>
+                                    </div>
+                                    <div class="modern-card c3">
+                                        <div class="card-icon">🔒</div>
+                                        <h3>Secure</h3>
+                                    </div>
+                                    <div class="modern-card c4">
+                                        <div class="card-icon">📱</div>
+                                        <h3>Mobile</h3>
+                                    </div>
+                                    <div class="modern-card c5">
+                                        <div class="card-icon">🌐</div>
+                                        <h3>Global</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 9: Circular Rotating Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">9. Circular Rotating Marquee</h2>
+                            <div class="marquee-container circular-wrapper">
+                                <div class="circular-marquee">
+                                    <svg viewBox="0 0 200 200" width="200" height="200">
+                                        <defs>
+                                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
+                                        </defs>
+                                        <text fill="#fff" font-size="22" font-weight="bold" letter-spacing="4">
+                                            <textPath href="#circlePath">
+                                                ROTATING • CIRCULAR • TEXT • ANIMATION •
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 10: Wave Path Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">10. Wave Path Marquee</h2>
+                            <div class="marquee-container wave-wrapper">
+                                <svg viewBox="0 0 1000 200" width="100%" height="200">
+                                    <path id="wavePath" fill="transparent" d="M0,100 C150,200 350,0 500,100 C650,200 850,0 1000,100" />
+                                    <text fill="#38bdf8" font-size="40" font-weight="bold">
+                                        <textPath href="#wavePath" startOffset="0%">
+                                            RIDING THE WAVE • SMOOTH CURVES • FLOWING TEXT • RIDING THE WAVE •
+                                            <animate attributeName="startOffset" from="100%" to="-100%" dur="10s" repeatCount="indefinite" />
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            </div>
+
+                            <!-- Marquee 11: Image Mask Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">11. Image Mask Marquee</h2>
+                            <div class="marquee-container mask-wrapper">
+                                <div class="mask-marquee">
+                                    <span class="mask-text">NATURE • OCEAN • SKY • EARTH •</span>
+                                    <span class="mask-text">NATURE • OCEAN • SKY • EARTH •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 12: Neon Glow Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">12. Neon Glow Marquee</h2>
+                            <div class="marquee-container neon-wrapper">
+                                <div class="neon-marquee">
+                                    <span class="neon-text">CYBERPUNK • NIGHT CITY • NEON LIGHTS • FUTURE •</span>
+                                    <span class="neon-text">CYBERPUNK • NIGHT CITY • NEON LIGHTS • FUTURE •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 13: Glitch Effect Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">13. Glitch Effect Marquee</h2>
+                            <div class="marquee-container glitch-wrapper">
+                                <div class="glitch-marquee">
+                                    <span class="glitch-text" data-text="SYSTEM FAILURE • ERROR 404 • DATA CORRUPTION •">SYSTEM FAILURE • ERROR 404 • DATA CORRUPTION •</span>
+                                    <span class="glitch-text" data-text="SYSTEM FAILURE • ERROR 404 • DATA CORRUPTION •">SYSTEM FAILURE • ERROR 404 • DATA CORRUPTION •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 14: Mirror Reflection Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">14. Mirror Reflection Marquee</h2>
+                            <div class="marquee-container mirror-wrapper">
+                                <div class="mirror-marquee">
+                                    <div class="mirror-content">
+                                        <span>REFLECTION • MIRROR • DUALITY • SYMMETRY •</span>
+                                        <span>REFLECTION • MIRROR • DUALITY • SYMMETRY •</span>
+                                    </div>
+                                    <div class="mirror-reflection">
+                                        <span>REFLECTION • MIRROR • DUALITY • SYMMETRY •</span>
+                                        <span>REFLECTION • MIRROR • DUALITY • SYMMETRY •</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 15: Typewriter Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">15. Typewriter Marquee</h2>
+                            <div class="marquee-container typewriter-wrapper">
+                                <div class="typewriter-marquee">
+                                    <span>INITIALIZING_SYSTEM... LOADING_ASSETS... CONNECTING_TO_SERVER... ACCESS_GRANTED...</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 16: Emoji Trail Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">16. Emoji Trail Marquee</h2>
+                            <div class="marquee-container emoji-wrapper">
+                                <div class="emoji-marquee">
+                                    <span>🔥 🚀 💻 🎨 ⚡ 💎 🌈 🍕 🎧 🎮 📸 🌍 🔥 🚀 💻 🎨 ⚡ 💎 🌈 🍕 🎧 🎮 📸 🌍</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 17: Blur Scroll Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">17. Blur Scroll Marquee</h2>
+                            <div class="marquee-container blur-wrapper">
+                                <div class="blur-marquee">
+                                    <span>FOCUS • CLARITY • VISION • FOCUS • CLARITY • VISION •</span>
+                                    <span>FOCUS • CLARITY • VISION • FOCUS • CLARITY • VISION •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 18: Zig-Zag Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">18. Zig-Zag Marquee</h2>
+                            <div class="marquee-container zigzag-wrapper">
+                                <div class="zigzag-marquee">
+                                    <span>BOUNCE • UP • DOWN • WAVE • BOUNCE • UP • DOWN • WAVE •</span>
+                                    <span>BOUNCE • UP • DOWN • WAVE • BOUNCE • UP • DOWN • WAVE •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 19: Gradient Flow Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">19. Gradient Flow Marquee</h2>
+                            <div class="marquee-container gradient-flow-wrapper">
+                                <div class="gradient-flow-marquee">
+                                    <span>COLOR • SPECTRUM • VIBRANT • FLOW • COLOR • SPECTRUM • VIBRANT • FLOW •</span>
+                                    <span>COLOR • SPECTRUM • VIBRANT • FLOW • COLOR • SPECTRUM • VIBRANT • FLOW •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 20: Velocity Skew Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">20. Velocity Skew Marquee</h2>
+                            <div class="marquee-container velocity-wrapper">
+                                <div class="velocity-marquee">
+                                    <span>SPEED • MOMENTUM • FAST • RUSH • SPEED • MOMENTUM • FAST • RUSH •</span>
+                                    <span>SPEED • MOMENTUM • FAST • RUSH • SPEED • MOMENTUM • FAST • RUSH •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 21: Retro Layers Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">21. Retro Layers Marquee</h2>
+                            <div class="marquee-container retro-wrapper">
+                                <div class="retro-marquee">
+                                    <span>RETRO • VINTAGE • LAYERS • STYLE • RETRO • VINTAGE • LAYERS • STYLE •</span>
+                                    <span>RETRO • VINTAGE • LAYERS • STYLE • RETRO • VINTAGE • LAYERS • STYLE •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 22: Spotlight Reveal Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">22. Spotlight Reveal Marquee</h2>
+                            <div class="marquee-container spotlight-wrapper">
+                                <div class="spotlight-marquee">
+                                    <span>MYSTERY • REVEAL • SHADOW • LIGHT • MYSTERY • REVEAL • SHADOW • LIGHT •</span>
+                                    <span>MYSTERY • REVEAL • SHADOW • LIGHT • MYSTERY • REVEAL • SHADOW • LIGHT •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 23: Jelly Bounce Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">23. Jelly Bounce Marquee</h2>
+                            <div class="marquee-container jelly-wrapper">
+                                <div class="jelly-marquee">
+                                    <span>JELLY • BOUNCE • SQUISH • FUN • JELLY • BOUNCE • SQUISH • FUN •</span>
+                                    <span>JELLY • BOUNCE • SQUISH • FUN • JELLY • BOUNCE • SQUISH • FUN •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 24: Variable Weight Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">24. Variable Weight Marquee</h2>
+                            <div class="marquee-container weight-wrapper">
+                                <div class="weight-marquee">
+                                    <span>BREATHE • EXPAND • WEIGHT • BOLD • BREATHE • EXPAND • WEIGHT • BOLD •</span>
+                                    <span>BREATHE • EXPAND • WEIGHT • BOLD • BREATHE • EXPAND • WEIGHT • BOLD •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 25: Staggered Columns Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">25. Staggered Columns Marquee</h2>
+                            <div class="marquee-container staggered-wrapper">
+                                <div class="staggered-col col-1">
+                                    <span>UP • UP • UP • UP • UP • UP • UP • UP •</span>
+                                    <span>UP • UP • UP • UP • UP • UP • UP • UP •</span>
+                                </div>
+                                <div class="staggered-col col-2">
+                                    <span>DOWN • DOWN • DOWN • DOWN • DOWN • DOWN •</span>
+                                    <span>DOWN • DOWN • DOWN • DOWN • DOWN • DOWN •</span>
+                                </div>
+                                <div class="staggered-col col-3">
+                                    <span>UP • UP • UP • UP • UP • UP • UP • UP •</span>
+                                    <span>UP • UP • UP • UP • UP • UP • UP • UP •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 26: Pixel Retro Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">26. Pixel Retro Marquee</h2>
+                            <div class="marquee-container pixel-wrapper">
+                                <div class="pixel-marquee">
+                                    <span>GAME OVER • INSERT COIN • HIGH SCORE • LEVEL UP • GAME OVER • INSERT COIN • HIGH SCORE • LEVEL UP •</span>
+                                    <span>GAME OVER • INSERT COIN • HIGH SCORE • LEVEL UP • GAME OVER • INSERT COIN • HIGH SCORE • LEVEL UP •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 27: Perspective Corner Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">27. Perspective Corner Marquee</h2>
+                            <div class="marquee-container corner-wrapper">
+                                <div class="corner-scene">
+                                    <div class="corner-face face-left">
+                                        <div class="corner-marquee">
+                                            <span>CORNER • EDGE • 3D • TURN • CORNER • EDGE • 3D • TURN •</span>
+                                            <span>CORNER • EDGE • 3D • TURN • CORNER • EDGE • 3D • TURN •</span>
+                                        </div>
+                                    </div>
+                                    <div class="corner-face face-right">
+                                        <div class="corner-marquee">
+                                            <span>CORNER • EDGE • 3D • TURN • CORNER • EDGE • 3D • TURN •</span>
+                                            <span>CORNER • EDGE • 3D • TURN • CORNER • EDGE • 3D • TURN •</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 28: Liquid Gooey Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">28. Liquid Gooey Marquee</h2>
+                            <div class="marquee-container liquid-wrapper">
+                                <div class="liquid-marquee">
+                                    <span>GOOEY • LIQUID • MELT • DRIP • GOOEY • LIQUID • MELT • DRIP •</span>
+                                    <span>GOOEY • LIQUID • MELT • DRIP • GOOEY • LIQUID • MELT • DRIP •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 29: Ghost Trail Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">29. Ghost Trail Marquee</h2>
+                            <div class="marquee-container ghost-wrapper">
+                                <div class="ghost-marquee">
+                                    <span>GHOST • TRAIL • FADE • SPIRIT • GHOST • TRAIL • FADE • SPIRIT •</span>
+                                    <span>GHOST • TRAIL • FADE • SPIRIT • GHOST • TRAIL • FADE • SPIRIT •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 30: Video Mask Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">30. Video Mask Marquee</h2>
+                            <div class="marquee-container video-mask-wrapper">
+                                <div class="video-mask-marquee">
+                                    <span>CINEMATIC • VIDEO • MASK • MOTION • CINEMATIC • VIDEO • MASK • MOTION •</span>
+                                    <span>CINEMATIC • VIDEO • MASK • MOTION • CINEMATIC • VIDEO • MASK • MOTION •</span>
+                                </div>
+                                <div class="video-bg-simulation"></div>
+                            </div>
+
+                            <!-- Marquee 31: Split Cut Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">31. Split Cut Marquee</h2>
+                            <div class="marquee-container split-wrapper">
+                                <div class="split-marquee-top">
+                                    <span>SLICE • CUT • SPLIT • DIVIDE • SLICE • CUT • SPLIT • DIVIDE •</span>
+                                    <span>SLICE • CUT • SPLIT • DIVIDE • SLICE • CUT • SPLIT • DIVIDE •</span>
+                                </div>
+                                <div class="split-marquee-bottom">
+                                    <span>SLICE • CUT • SPLIT • DIVIDE • SLICE • CUT • SPLIT • DIVIDE •</span>
+                                    <span>SLICE • CUT • SPLIT • DIVIDE • SLICE • CUT • SPLIT • DIVIDE •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 32: Underwater Wobble Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">32. Underwater Wobble Marquee</h2>
+                            <div class="marquee-container underwater-wrapper">
+                                <div class="underwater-marquee">
+                                    <span>DEEP • OCEAN • WOBBLE • FLUID • DEEP • OCEAN • WOBBLE • FLUID •</span>
+                                    <span>DEEP • OCEAN • WOBBLE • FLUID • DEEP • OCEAN • WOBBLE • FLUID •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 33: Accordion Expand Marquee -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">33. Accordion Expand Marquee</h2>
+                            <div class="marquee-container accordion-wrapper">
+                                <div class="accordion-marquee">
+                                    <span>EXPAND • STRETCH • WIDE • GROW • EXPAND • STRETCH • WIDE • GROW •</span>
+                                    <span>EXPAND • STRETCH • WIDE • GROW • EXPAND • STRETCH • WIDE • GROW •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 34: JS Controlled (Interactive Speed) -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">34. JS Controlled (Interactive Speed)</h2>
+                            <div class="marquee-container js-marquee" id="js-marquee">
+                                <div class="marquee-track" id="js-track">
+                                    <span class="big-text">INTERACTIVE • DYNAMIC • CONTROL • SPEED • </span>
+                                    <span class="big-text">INTERACTIVE • DYNAMIC • CONTROL • SPEED • </span>
+                                    <span class="big-text">INTERACTIVE • DYNAMIC • CONTROL • SPEED • </span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 35: Multi-Layer Composite -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">35. Multi-Layer Composite</h2>
+                            <div class="marquee-container" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 0; position: relative; overflow: hidden;">
+                            <div style="display: flex; width: max-content; animation: scroll-left 20s linear infinite;">
+                                    <span style="font-size: 5rem; font-weight: 900; background: linear-gradient(45deg, #fff, #f0f0f0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-right: 3rem; text-shadow: 0 0 20px rgba(255,255,255,0.5);">MARQUEE • VARIETY • PACK • COMPLETE • MARQUEE • VARIETY • PACK • COMPLETE •</span>
+                                    <span style="font-size: 5rem; font-weight: 900; background: linear-gradient(45deg, #fff, #f0f0f0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-right: 3rem; text-shadow: 0 0 20px rgba(255,255,255,0.5);">MARQUEE • VARIETY • PACK • COMPLETE • MARQUEE • VARIETY • PACK • COMPLETE •</span>
+                                </div>
+                            </div>
+
+<!--                            &lt;!&ndash; Marquee 36: Glassmorphism Floating Cards &ndash;&gt;-->
+<!--                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">36. Glassmorphism Floating Cards</h2>-->
+<!--                            <div class="marquee-container glass-card-wrapper">-->
+<!--                                <div class="glass-card-marquee">-->
+<!--                                    <div class="glass-card">-->
+<!--                                        <i class="fa fa-rocket"></i>-->
+<!--                                        <h4>Fast Launch</h4>-->
+<!--                                        <p>Deploy your projects with lightning speed and efficiency.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="glass-card">-->
+<!--                                        <i class="fa fa-shield"></i>-->
+<!--                                        <h4>Secure Core</h4>-->
+<!--                                        <p>Enterprise-grade security built into every component.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="glass-card">-->
+<!--                                        <i class="fa fa-magic"></i>-->
+<!--                                        <h4>AI Powered</h4>-->
+<!--                                        <p>Smart automation that learns and adapts to your needs.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="glass-card">-->
+<!--                                        <i class="fa fa-cloud"></i>-->
+<!--                                        <h4>Cloud Scale</h4>-->
+<!--                                        <p>Scale infinitely with our global cloud infrastructure.</p>-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash; Clone for seamless loop &ndash;&gt;-->
+<!--                                    <div class="glass-card">-->
+<!--                                        <i class="fa fa-rocket"></i>-->
+<!--                                        <h4>Fast Launch</h4>-->
+<!--                                        <p>Deploy your projects with lightning speed and efficiency.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="glass-card">-->
+<!--                                        <i class="fa fa-shield"></i>-->
+<!--                                        <h4>Secure Core</h4>-->
+<!--                                        <p>Enterprise-grade security built into every component.</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Marquee 37: Gradient Border Glow &ndash;&gt;-->
+<!--                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">37. Gradient Border Glow</h2>-->
+<!--                            <div class="marquee-container gradient-border-wrapper">-->
+<!--                                <div class="gradient-border-marquee">-->
+<!--                                    <span class="gradient-border-text">PREMIUM • MODERN • AESTHETIC • GLOW •</span>-->
+<!--                                    <span class="gradient-border-text">PREMIUM • MODERN • AESTHETIC • GLOW •</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Marquee 38: Magnetic Interactive Text &ndash;&gt;-->
+<!--                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">38. Magnetic Interactive Text</h2>-->
+<!--                            <div class="marquee-container magnetic-wrapper">-->
+<!--                                <div class="magnetic-marquee">-->
+<!--                                    <span class="magnetic-item">INTERACT</span>-->
+<!--                                    <span class="magnetic-item">HOVER</span>-->
+<!--                                    <span class="magnetic-item">FEEL</span>-->
+<!--                                    <span class="magnetic-item">MAGNETIC</span>-->
+<!--                                    <span class="magnetic-item">INTERACT</span>-->
+<!--                                    <span class="magnetic-item">HOVER</span>-->
+<!--                                    <span class="magnetic-item">FEEL</span>-->
+<!--                                    <span class="magnetic-item">MAGNETIC</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Marquee 39: Parallax Depth Layers &ndash;&gt;-->
+<!--                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">39. Parallax Depth Layers</h2>-->
+<!--                            <div class="marquee-container parallax-wrapper">-->
+<!--                                <div class="parallax-layer parallax-layer-back">-->
+<!--                                    <span>BACKGROUND • DEPTH • PARALLAX • BACKGROUND • DEPTH • PARALLAX •</span>-->
+<!--                                </div>-->
+<!--                                <div class="parallax-layer parallax-layer-front">-->
+<!--                                    <span>FRONT • FOCUS • SHARP • FRONT • FOCUS • SHARP •</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Marquee 40: Bento Grid Marquee &ndash;&gt;-->
+<!--                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">40. Bento Grid Marquee</h2>-->
+<!--                            <div class="marquee-container bento-wrapper">-->
+<!--                                <div class="bento-grid">-->
+<!--                                    <div class="bento-item large">-->
+<!--                                        <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Main Vision</h3>-->
+<!--                                        <p>Our core philosophy is centered around user experience and visual excellence.</p>-->
+<!--                                        <div class="bento-marquee-container">-->
+<!--                                            <div class="bento-marquee">-->
+<!--                                                <span>VISION • INNOVATION • DESIGN • VISION • INNOVATION • DESIGN •</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="bento-item">-->
+<!--                                        <i class="fa fa-bolt" style="font-size: 2rem; color: #fbbf24; margin-bottom: 1rem;"></i>-->
+<!--                                        <h4>Speed</h4>-->
+<!--                                    </div>-->
+<!--                                    <div class="bento-item">-->
+<!--                                        <i class="fa fa-heart" style="font-size: 2rem; color: #f472b6; margin-bottom: 1rem;"></i>-->
+<!--                                        <h4>Passion</h4>-->
+<!--                                    </div>-->
+<!--                                    <div class="bento-item wide">-->
+<!--                                        <h4>Global Reach</h4>-->
+<!--                                        <p>Connecting users across the globe with seamless technology.</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                            <!-- Marquee 36: Liquid Distortion -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">36. Liquid Distortion</h2>
+                            <div class="marquee-container liquid-distortion-wrapper">
+                                <div class="liquid-distortion-marquee">
+                                    <span>LIQUID • FLOW • DISTORT • MODERN • LIQUID • FLOW • DISTORT • MODERN •</span>
+                                    <span>LIQUID • FLOW • DISTORT • MODERN • LIQUID • FLOW • DISTORT • MODERN •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 37: Split-Text Reveal -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">37. Split-Text Reveal</h2>
+                            <div class="marquee-container split-reveal-wrapper">
+                                <div class="split-reveal-top">
+                                    <span>SPLIT • REVEAL • DUAL • MOTION • SPLIT • REVEAL • DUAL • MOTION •</span>
+                                </div>
+                                <div class="split-reveal-bottom">
+                                    <span>SPLIT • REVEAL • DUAL • MOTION • SPLIT • REVEAL • DUAL • MOTION •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 38: 3D Floating Elements -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">38. 3D Floating Elements</h2>
+                            <div class="marquee-container floating-3d-wrapper">
+                                <div class="floating-3d-marquee">
+                                    <div class="floating-3d-item">DESIGN</div>
+                                    <div class="floating-3d-item">FUTURE</div>
+                                    <div class="floating-3d-item">BEYOND</div>
+                                    <div class="floating-3d-item">DESIGN</div>
+                                    <div class="floating-3d-item">FUTURE</div>
+                                    <div class="floating-3d-item">BEYOND</div>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 39: Masked Video Background -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">39. Masked Video Background</h2>
+                            <div class="marquee-container video-mask-modern-wrapper">
+                                <div class="video-mask-modern-bg"></div>
+                                <div class="video-mask-modern-marquee">
+                                    <span>ULTRA • MODERN • MASK • ULTRA • MODERN • MASK •</span>
+                                    <span>ULTRA • MODERN • MASK • ULTRA • MODERN • MASK •</span>
+                                </div>
+                            </div>
+
+                            <!-- Marquee 40: Dynamic Variable Weight -->
+                            <h2 style="color: #94a3b8; font-size: 1.5rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">40. Dynamic Variable Weight</h2>
+                            <div class="marquee-container variable-weight-modern-wrapper">
+                                <div class="variable-weight-modern-marquee">
+                                    <span>DYNAMIC • WEIGHT • VARIABLE • DYNAMIC • WEIGHT • VARIABLE •</span>
+                                    <span>DYNAMIC • WEIGHT • VARIABLE • DYNAMIC • WEIGHT • VARIABLE •</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <svg style="position: absolute; width: 0; height: 0;">
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                <feBlend in="SourceGraphic" in2="goo" />
+                            </filter>
+                            <filter id="turbulence">
+                                <feTurbulence type="fractalNoise" baseFrequency="0.02 0.02" numOctaves="3" seed="2">
+                                    <animate attributeName="baseFrequency" dur="10s" values="0.02 0.02; 0.05 0.05; 0.02 0.02" repeatCount="indefinite" />
+                                </feTurbulence>
+                                <feDisplacementMap in="SourceGraphic" scale="25" />
+                            </filter>
+                            <filter id="turbulence-modern">
+                                <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turb">
+                                    <animate attributeName="baseFrequency" dur="5s" values="0.05; 0.01; 0.05" repeatCount="indefinite" />
+                                </feTurbulence>
+                                <feDisplacementMap in="SourceGraphic" in2="turb" scale="30" xChannelSelector="R" yChannelSelector="G" />
+                            </filter>
+                        </svg>
+                    </section>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

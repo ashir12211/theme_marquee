@@ -1,0 +1,1381 @@
+/* 35 Marquee Variety Pack Styles */
+
+/* --- Marquee Containers --- */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Fade edges effect - Using mask-image for better compatibility with different backgrounds */
+.marquee-container {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-container::before,
+.marquee-container::after {
+    display: none;
+    /* Removing old hardcoded fade */
+}
+
+/* --- 1. Basic CSS Marquee --- */
+.basic-marquee .marquee-content {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite;
+}
+
+.basic-marquee span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-right: 2rem;
+}
+
+/* --- 2. Pause on Hover Marquee --- */
+.hover-marquee .marquee-content {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.hover-marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.card {
+    background: #1e293b;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #334155;
+    cursor: pointer;
+}
+
+/* --- 3. Seamless Infinite Loop (Reverse) --- */
+.seamless-marquee .marquee-track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll-right 25s linear infinite;
+}
+
+.text-item {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #cbd5e1;
+    letter-spacing: 2px;
+}
+
+/* --- 4. Vertical Marquee --- */
+.vertical-marquee {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #0f172a, transparent, #0f172a);
+}
+
+.vertical-marquee::before,
+.vertical-marquee::after {
+    width: 100%;
+    height: 50px;
+    left: 0;
+}
+
+.vertical-marquee::before {
+    top: 0;
+    background: linear-gradient(to bottom, #0f172a, transparent);
+}
+
+.vertical-marquee::after {
+    top: auto;
+    bottom: 0;
+    background: linear-gradient(to top, #0f172a, transparent);
+}
+
+.marquee-track-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: scroll-up 10s linear infinite;
+}
+
+.v-item {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #f472b6;
+    text-align: center;
+}
+
+/* --- 5. Angled Marquee --- */
+.angled-wrapper {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.angled-marquee {
+    transform: rotate(-5deg) scale(1.1);
+    width: 120%;
+    background: #fbbf24;
+    color: #000;
+    padding: 1rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.angled-marquee .marquee-content {
+    animation: scroll-left 10s linear infinite;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+/* --- 6. Outline & Fill Typography Marquee --- */
+.outline-fill-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #000;
+    padding: 2rem 0;
+}
+
+.marquee-track-outline {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.marquee-track-outline.reverse {
+    animation: scroll-right 15s linear infinite;
+}
+
+.filled-text,
+.outline-text {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-right: 2rem;
+    text-transform: uppercase;
+}
+
+.filled-text {
+    color: #fff;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+}
+
+/* --- 7. 3D Perspective Scroll Marquee --- */
+.perspective-container {
+    perspective: 1000px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+}
+
+.marquee-3d {
+    transform: rotateX(20deg) rotateY(-10deg);
+    transform-style: preserve-3d;
+    width: 120%;
+}
+
+.marquee-content-3d {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 12s linear infinite;
+    background: linear-gradient(90deg, #ff00cc, #333399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 204, 0.3);
+}
+
+/* --- 8. Modern Card Strip Marquee --- */
+.card-strip-wrapper {
+    background: transparent;
+    border: none;
+    overflow: visible;
+    padding: 3rem 0;
+}
+
+.card-strip-content {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+    padding: 1rem;
+}
+
+.card-strip-wrapper:hover .card-strip-content {
+    animation-play-state: paused;
+}
+
+.modern-card {
+    width: 200px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.modern-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.3);
+    border-color: #38bdf8;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.modern-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.c1 {
+    border-top: 4px solid #f472b6;
+}
+
+.c2 {
+    border-top: 4px solid #fbbf24;
+}
+
+.c3 {
+    border-top: 4px solid #34d399;
+}
+
+.c4 {
+    border-top: 4px solid #60a5fa;
+}
+
+.c5 {
+    border-top: 4px solid #a78bfa;
+}
+
+/* --- 9. Circular Rotating Marquee --- */
+.circular-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: radial-gradient(circle at center, #1e293b, #0f172a);
+}
+
+.circular-marquee {
+    animation: rotate-circle 10s linear infinite;
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- 10. Wave Path Marquee (Handled via SVG) --- */
+.wave-wrapper {
+    padding: 2rem 0;
+}
+
+/* --- 11. Image Mask Marquee --- */
+.mask-wrapper {
+    padding: 2rem 0;
+    background: #fff;
+}
+
+.mask-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.mask-text {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-right: 2rem;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- 12. Neon Glow Marquee --- */
+.neon-wrapper {
+    background: #050505;
+    padding: 3rem 0;
+}
+
+.neon-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 12s linear infinite;
+}
+
+.neon-text {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-right: 2rem;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00de,
+        0 0 30px #ff00de,
+        0 0 40px #ff00de,
+        0 0 55px #ff00de,
+        0 0 75px #ff00de;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        opacity: 1;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #ff00de,
+            0 0 30px #ff00de,
+            0 0 40px #ff00de,
+            0 0 55px #ff00de,
+            0 0 75px #ff00de;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.5;
+        text-shadow: none;
+    }
+}
+
+/* --- 13. Glitch Effect Marquee --- */
+.glitch-wrapper {
+    background: #1a1a1a;
+    padding: 3rem 0;
+}
+
+.glitch-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 10s linear infinite;
+}
+
+.glitch-text {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip-path: inset(44% 0 61% 0);
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip-path: inset(50% 0 30% 0);
+    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% {
+        clip-path: inset(20% 0 80% 0);
+    }
+
+    20% {
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    40% {
+        clip-path: inset(40% 0 50% 0);
+    }
+
+    60% {
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    80% {
+        clip-path: inset(10% 0 70% 0);
+    }
+
+    100% {
+        clip-path: inset(30% 0 20% 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip-path: inset(10% 0 60% 0);
+    }
+
+    20% {
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    40% {
+        clip-path: inset(30% 0 20% 0);
+    }
+
+    60% {
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    80% {
+        clip-path: inset(50% 0 30% 0);
+    }
+
+    100% {
+        clip-path: inset(70% 0 10% 0);
+    }
+}
+
+/* --- 14. Mirror Reflection Marquee --- */
+.mirror-wrapper {
+    padding: 4rem 0;
+    background: #000;
+}
+
+.mirror-marquee {
+    position: relative;
+    width: 100%;
+}
+
+.mirror-content,
+.mirror-reflection {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 18s linear infinite;
+}
+
+.mirror-content span,
+.mirror-reflection span {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    margin-right: 2rem;
+    text-transform: uppercase;
+}
+
+.mirror-reflection {
+    transform: scaleY(-1);
+    opacity: 0.3;
+    margin-top: -10px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+/* --- 15. Typewriter Marquee --- */
+.typewriter-wrapper {
+    background: #000;
+    padding: 3rem 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.typewriter-marquee {
+    width: max-content;
+    animation: scroll-left 20s steps(60) infinite;
+}
+
+.typewriter-marquee span {
+    font-size: 2.5rem;
+    color: #0f0;
+    border-right: 15px solid #0f0;
+}
+
+/* --- 16. Emoji Trail Marquee --- */
+.emoji-wrapper {
+    background: #fff;
+    padding: 2rem 0;
+}
+
+.emoji-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.emoji-marquee span {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+}
+
+/* --- 17. Blur Scroll Marquee --- */
+.blur-wrapper {
+    background: #111;
+    padding: 3rem 0;
+}
+
+.blur-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.blur-marquee span {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-right: 2rem;
+    animation: blur-pulse 3s infinite alternate;
+}
+
+@keyframes blur-pulse {
+    0% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    50% {
+        filter: blur(2px);
+        opacity: 0.8;
+    }
+
+    100% {
+        filter: blur(6px);
+        opacity: 0.4;
+    }
+}
+
+/* --- 18. Zig-Zag Marquee --- */
+.zigzag-wrapper {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    background: #222;
+    overflow: hidden;
+}
+
+.zigzag-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 12s linear infinite;
+}
+
+.zigzag-marquee span {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffd700;
+    margin-right: 2rem;
+    display: inline-block;
+    animation: zigzag-bounce 2s ease-in-out infinite;
+}
+
+@keyframes zigzag-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+/* --- 19. Gradient Flow Marquee --- */
+.gradient-flow-wrapper {
+    background: #000;
+    padding: 3rem 0;
+}
+
+.gradient-flow-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.gradient-flow-marquee span {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-right: 2rem;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-flow 5s linear infinite;
+}
+
+@keyframes rainbow-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* --- 20. Velocity Skew Marquee --- */
+.velocity-wrapper {
+    background: #1e293b;
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+.velocity-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 8s linear infinite;
+    transform: skewX(-20deg);
+}
+
+.velocity-marquee span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #00e5ff;
+    /* Brighter cyan */
+    margin-right: 3rem;
+    text-shadow: 15px 0 30px rgba(0, 229, 255, 0.6);
+}
+
+/* --- 21. Retro Layers Marquee --- */
+.retro-wrapper {
+    background: #f0f9ff;
+    padding: 3rem 0;
+}
+
+.retro-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.retro-marquee span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #2563eb;
+    margin-right: 4rem;
+    text-shadow:
+        4px 4px 0px #60a5fa,
+        8px 8px 0px #93c5fd,
+        12px 12px 0px #bfdbfe,
+        16px 16px 0px #dbeafe;
+}
+
+/* --- 22. Spotlight Reveal Marquee --- */
+.spotlight-wrapper {
+    background: #000;
+    padding: 3rem 0;
+}
+
+.spotlight-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.spotlight-marquee span {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    /* Improved base visibility */
+    margin-right: 2rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, #fff 50%, rgba(255, 255, 255, 0.3) 100%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: spotlight-move 3s ease-in-out infinite;
+}
+
+@keyframes spotlight-move {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* --- 23. Jelly Bounce Marquee --- */
+.jelly-wrapper {
+    background: #ffedd5;
+    padding: 3rem 0;
+}
+
+.jelly-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.jelly-marquee span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ea580c;
+    margin-right: 3rem;
+    display: inline-block;
+    animation: jelly-anim 2s infinite;
+}
+
+@keyframes jelly-anim {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+/* --- 24. Variable Weight Marquee --- */
+.weight-wrapper {
+    background: #fff;
+    padding: 3rem 0;
+}
+
+.weight-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.weight-marquee span {
+    font-size: 4rem;
+    color: #000;
+    margin-right: 2rem;
+    animation: weight-pulse 2s infinite alternate;
+}
+
+@keyframes weight-pulse {
+    0% {
+        font-weight: 100;
+        letter-spacing: 0px;
+    }
+
+    100% {
+        font-weight: 900;
+        letter-spacing: 5px;
+    }
+}
+
+/* --- 25. Staggered Columns Marquee --- */
+.staggered-wrapper {
+    background: #111;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.staggered-col {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.staggered-col span {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.col-1 {
+    animation: scroll-up 10s linear infinite;
+}
+
+.col-2 {
+    animation: scroll-down 12s linear infinite;
+}
+
+.col-3 {
+    animation: scroll-up 15s linear infinite;
+}
+
+/* --- 26. Pixel Retro Marquee --- */
+.pixel-wrapper {
+    background: #222;
+    padding: 3rem 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.pixel-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left-steps 10s steps(40) infinite;
+}
+
+.pixel-marquee span {
+    font-size: 3rem;
+    color: #0f0;
+    margin-right: 2rem;
+    text-shadow: 2px 2px 0 #000;
+    image-rendering: pixelated;
+}
+
+@keyframes scroll-left-steps {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- 27. Perspective Corner Marquee --- */
+.corner-wrapper {
+    background: #000;
+    padding: 5rem 0;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.corner-scene {
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.corner-face {
+    width: 300px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.face-left {
+    transform: rotateY(45deg) translateX(50px);
+    transform-origin: right center;
+}
+
+.face-right {
+    transform: rotateY(-45deg) translateX(-50px);
+    transform-origin: left center;
+}
+
+.corner-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 5s linear infinite;
+}
+
+.corner-marquee span {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+/* --- 28. Liquid Gooey Marquee --- */
+.liquid-wrapper {
+    background: #000;
+    padding: 3rem 0;
+    filter: url('#goo');
+}
+
+.liquid-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 12s linear infinite;
+}
+
+.liquid-marquee span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ff0055;
+    margin-right: -1rem;
+}
+
+/* --- 29. Ghost Trail Marquee --- */
+.ghost-wrapper {
+    background: #000;
+    padding: 3rem 0;
+}
+
+.ghost-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 10s linear infinite;
+}
+
+.ghost-marquee span {
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 2rem;
+    text-shadow:
+        10px 0 0 rgba(255, 255, 255, 0.4),
+        20px 0 0 rgba(255, 255, 255, 0.2),
+        30px 0 0 rgba(255, 255, 255, 0.1),
+        40px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* --- 30. Video Mask Marquee --- */
+.video-mask-wrapper {
+    background: #000;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg-simulation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    background-size: 400% 400%;
+    animation: gradient-bg 10s ease infinite;
+    z-index: 0;
+}
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.video-mask-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+    position: relative;
+    z-index: 1;
+    background: #000;
+    mix-blend-mode: screen;
+}
+
+.video-mask-marquee span {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #000;
+    background: #fff;
+    margin-right: 2rem;
+    padding: 0 1rem;
+}
+
+/* --- 31. Split Cut Marquee --- */
+.split-wrapper {
+    background: #111;
+    padding: 3rem 0;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.split-marquee-top,
+.split-marquee-bottom {
+    display: flex;
+    width: max-content;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.split-marquee-top {
+    top: 50%;
+    transform: translateY(-100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    animation: scroll-left 15s linear infinite;
+}
+
+.split-marquee-bottom {
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    animation: scroll-left 15s linear infinite;
+}
+
+.split-marquee-top span,
+.split-marquee-bottom span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+/* --- 32. Underwater Wobble Marquee --- */
+.underwater-wrapper {
+    background: #001e3c;
+    padding: 3rem 0;
+    filter: url(#turbulence);
+}
+
+.underwater-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.underwater-marquee span {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #00bcd4;
+    margin-right: 2rem;
+}
+
+/* --- 33. Accordion Expand Marquee --- */
+.accordion-wrapper {
+    background: #fff;
+    padding: 3rem 0;
+}
+
+.accordion-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.accordion-marquee span {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #333;
+    margin-right: 2rem;
+    animation: accordion-breath 3s infinite ease-in-out alternate;
+}
+
+@keyframes accordion-breath {
+    0% {
+        letter-spacing: -5px;
+    }
+
+    100% {
+        letter-spacing: 20px;
+    }
+}
+
+/* --- 34. JS Controlled (Interactive Speed) Marquee --- */
+.js-marquee {
+    padding: 2rem 0;
+    background: #000;
+}
+
+.js-marquee .marquee-track {
+    display: flex;
+    width: max-content;
+}
+
+.big-text {
+    font-size: 4rem;
+    font-weight: 900;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    color: transparent;
+    margin-right: 2rem;
+}
+
+/* --- 35. Multi-Layer Composite (Handled via inline styles in XML) --- */
+
+/* --- 41. Liquid Distortion Marquee --- */
+.liquid-distortion-wrapper {
+    background: #000;
+    padding: 4rem 0;
+    filter: url(#turbulence-modern);
+}
+
+.liquid-distortion-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 12s linear infinite;
+}
+
+.liquid-distortion-marquee span {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #00ff88;
+    margin-right: 3rem;
+    text-transform: uppercase;
+}
+
+/* --- 42. Split-Text Reveal Marquee --- */
+.split-reveal-wrapper {
+    background: #111;
+    padding: 4rem 0;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.split-reveal-top,
+.split-reveal-bottom {
+    display: flex;
+    width: max-content;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.split-reveal-top {
+    top: 50%;
+    transform: translateY(-100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    animation: scroll-left 15s linear infinite;
+}
+
+.split-reveal-bottom {
+    top: 50%;
+    transform: translateY(-50%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    animation: scroll-right 15s linear infinite;
+}
+
+.split-reveal-top span,
+.split-reveal-bottom span {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+/* --- 43. 3D Floating Elements Marquee --- */
+.floating-3d-wrapper {
+    background: radial-gradient(circle at center, #2c3e50, #000);
+    height: 400px;
+    perspective: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.floating-3d-marquee {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll-left 25s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.floating-3d-item {
+    padding: 2rem 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    backdrop-filter: blur(5px);
+    transform: rotateY(25deg) rotateX(10deg);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    animation: float-3d 4s ease-in-out infinite alternate;
+}
+
+@keyframes float-3d {
+    from {
+        transform: rotateY(25deg) rotateX(10deg) translateY(0px);
+    }
+
+    to {
+        transform: rotateY(15deg) rotateX(-5deg) translateY(-20px);
+    }
+}
+
+/* --- 44. Masked Video Background Marquee --- */
+.video-mask-modern-wrapper {
+    background: #000;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-mask-modern-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient-flow-bg 15s ease infinite;
+}
+
+@keyframes gradient-flow-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.video-mask-modern-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+    background: #000;
+    mix-blend-mode: multiply;
+    position: relative;
+    z-index: 1;
+}
+
+.video-mask-modern-marquee span {
+    font-size: 8rem;
+    font-weight: 950;
+    color: #fff;
+    margin-right: 4rem;
+    text-transform: uppercase;
+}
+
+/* --- 45. Dynamic Variable Weight Marquee --- */
+.variable-weight-modern-wrapper {
+    background: #fff;
+    padding: 4rem 0;
+}
+
+.variable-weight-modern-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.variable-weight-modern-marquee span {
+    font-size: 5rem;
+    color: #000;
+    margin-right: 3rem;
+    animation: dynamic-weight 3s ease-in-out infinite alternate;
+}
+
+@keyframes dynamic-weight {
+    0% {
+        font-weight: 100;
+        font-variation-settings: "wght" 100;
+        letter-spacing: 10px;
+    }
+
+    100% {
+        font-weight: 900;
+        font-variation-settings: "wght" 900;
+        letter-spacing: -2px;
+    }
+}
+
+/* --- Shared Keyframes --- */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
